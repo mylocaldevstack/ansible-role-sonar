@@ -1,0 +1,5 @@
+---
+- name: Add service user and group for sonar daemon.
+  user:
+    name: "{{ sonar_service_user }}"
+    group: "{{ sonar_service_group }}"

@@ -4,9 +4,9 @@ dependencies:
   - geerlingguy.mysql
 
 galaxy_info:
-  author: geerlingguy
+  author: mylocaldevstack
   description: SonarQube for Linux
-  company: "Midwestern Mac, LLC"
+  company: "DXC Technology"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.8
   platforms:

@@ -1,8 +1,6 @@
 # Ansible Role: SonarQube
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-sonar.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-sonar)
-
-An Ansible Role that installs [SonarQube](http://www.sonarqube.org/) on RedHat/CentOS and Debian/Ubuntu Linux servers.
+An Ansible Role that installs [SonarQube](http://www.sonarqube.org/) 7.2.1 on RedHat/CentOS and Debian/Ubuntu Linux servers. This is a fork of [geerlingguy sonar role](https://github.com/geerlingguy/ansible-role-sonar)
 
 ## Requirements
 
@@ -17,22 +15,27 @@ Finally, recent versions of SonarQube also require MySQL 5.6 or later.
 
 Available variables are listed below, along with default values:
 
-    workspace: /root
+    ```yaml
+    workspace: /root 
+    #Directory where downloaded files will be temporarily stored.
 
-Directory where downloaded files will be temporarily stored.
+    sonar_install_directory: /opt/sonar
+    #Final directory where sonar will be installed
 
     sonar_download_validate_certs: yes
+    #Controls whether to validate certificates when downloading SonarQube.
 
-Controls whether to validate certificates when downloading SonarQube.
+    sonar_service_user: sonar
+    sonar_service_group: sonar
+    #User and group name that will be used to CHOWN sonar_install_directory
+    #sonar_service_user will also be injected into the sonar.sh for RUN_AS_USER parameter
 
-    sonar_download_url: http://dist.sonar.codehaus.org/sonarqube-4.5.4.zip
-    sonar_version_directory: sonarqube-4.5.4
-
-The URL from which SonarQube will be downloaded, and the resulting directory name (should match the download archive, without the archive extension).
+    sonar_download_url: https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-7.2.1.zip"
+    sonar_version_directory: sonarqube-7.2.1
+    #The URL from which SonarQube will be downloaded, and the resulting directory name (should match the download archive, without the archive extension).
 
     sonar_web_context: ''
-
-The value of `sonar.web.context`. Setting this to something like `/sonar` allows you to set the context where Sonar can be accessed (e.g. `hostname/sonar` instead of `hostname`).
+    #The value of `sonar.web.context`. Setting this to something like `/sonar` allows you to set the context where Sonar can be accessed (e.g. `hostname/sonar` instead of `hostname`).
 
     sonar_mysql_username: sonar
     sonar_mysql_password: sonar
@@ -45,8 +48,8 @@ The value of `sonar.web.context`. Setting this to something like `/sonar` allows
       - 127.0.0.1
       - ::1
       - localhost
-
-JDBC settings for a connection to a MySQL database. Defaults presume the database resides on localhost and is only accessible on the SonarQube server itself.
+    #JDBC settings for a connection to a MySQL database. Defaults presume the database resides on localhost and is only accessible on the SonarQube server itself.
+```
 
 ## Dependencies
 
