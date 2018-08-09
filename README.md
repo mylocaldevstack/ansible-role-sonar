@@ -60,7 +60,7 @@ sonar_mysql_allowed_hosts:
 
     - hosts: all
       roles:
-        - geerlingguy.sonar
+        - mylocaldevstack.ansible_role_sonar
 
 Using the defaults, you can view the SonarQube home at `http://localhost:9000/` (default System administrator credentials are `admin`/`admin`).
 
@@ -70,4 +70,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+This role was created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), and modified by /me. Thanks Jeff! i fixed your crap.
