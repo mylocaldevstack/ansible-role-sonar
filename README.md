@@ -11,7 +11,7 @@ Requires the `unzip` utility to be installed on the server. Also, different Sona
 
 Finally, recent versions of SonarQube also require MySQL 5.6 or later.
 
-## Role Variables
+## Role Variables  
 
 Available variables are listed below, along with default values:
 
