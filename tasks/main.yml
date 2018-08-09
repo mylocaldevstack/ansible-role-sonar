@@ -35,6 +35,7 @@
     dest: "{{ sonar_install_directory }}"
     owner: "{{ sonar_service_user }}"
     group: "{{ sonar_service_group }}"
+    state: link
 
 - include: configure.yml
 
