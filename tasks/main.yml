@@ -63,8 +63,8 @@
   template:
     src: sonar.unit.j2
     dest: /etc/systemd/system/sonar.service
-    owner: root
-    group: root
+    owner: "{{ sonar_service_user }}"
+    group: "{{ sonar_service_group }}"
     mode: 0755
   when: "ansible_service_mgr == 'systemd'"
 
