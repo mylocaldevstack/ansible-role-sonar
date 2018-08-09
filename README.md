@@ -15,7 +15,7 @@ Finally, recent versions of SonarQube also require MySQL 5.6 or later.
 
 Available variables are listed below, along with default values:
 
-    ```yaml
+    ```yml
     workspace: /root 
     #Directory where downloaded files will be temporarily stored.
 
