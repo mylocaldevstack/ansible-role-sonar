@@ -4,6 +4,7 @@ dependencies:
   - geerlingguy.mysql
 
 galaxy_info:
+  role_name: sonarqube
   author: mylocaldevstack
   description: SonarQube for Linux
   company: "DXC Technology"
